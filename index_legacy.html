@@ -1,0 +1,2141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veneservicios Integrales J.U, C.A. | Seguridad y Tecnología de Vanguardia</title>
+    <meta name="description" content="Especialistas en sistemas CCTV, control de acceso, cercos eléctricos y redes. Marcas EZVIZ, HIKVISION, DAHUA. Instalación profesional garantizada.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Veneservicios JU - Seguridad Inteligente">
+    <meta property="og:description" content="Soluciones integrales en seguridad y tecnología para tu hogar o empresa">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ===== CSS RESET & BASE ===== */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Primary Palette (from Logo) */
+            --primary-900: #0A1628;
+            --primary-800: #132D4B;
+            --primary-700: #1B3A5F;
+            --primary-600: #244F7A;
+            --primary-500: #2E86C1;
+            --primary-400: #5DADE2;
+            --primary-300: #85C1E9;
+            --primary-200: #AED6F1;
+            --primary-100: #D4E6F1;
+
+            /* Neutrals */
+            --neutral-900: #1A252F;
+            --neutral-800: #2C3E50;
+            --neutral-600: #566573;
+            --neutral-400: #ABB2B9;
+            --neutral-200: #EAEDED;
+            --neutral-100: #F8F9FA;
+            --white: #FFFFFF;
+
+            /* WhatsApp Color */
+            --whatsapp-green: #25D366;
+            --whatsapp-dark: #128C7E;
+
+            /* Typography */
+            --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-heading: 'Poppins', sans-serif;
+
+            /* Spacing */
+            --section-padding: 100px;
+            --container-max: 1400px;
+
+            /* Shadows */
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.04);
+            --shadow-md: 0 4px 20px rgba(0,0,0,0.08);
+            --shadow-lg: 0 12px 40px rgba(0,0,0,0.12);
+            --shadow-xl: 0 20px 60px rgba(0,0,0,0.15);
+
+            /* Border Radius */
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+            --radius-full: 9999px;
+
+            /* Transitions */
+            --transition-fast: 0.2s ease;
+            --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            color: var(--neutral-800);
+            line-height: 1.6;
+            background-color: var(--white);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition-base);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 48px;
+            z-index: 1000;
+            background: rgba(255,255,255,0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid transparent;
+            transition: all var(--transition-base);
+        }
+
+        .navbar.scrolled {
+            background: rgba(255,255,255,0.98);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+            border-bottom-color: var(--neutral-200);
+        }
+
+        .navbar-logo {
+            height: 45px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 36px;
+        }
+
+        .nav-link {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--neutral-800);
+            letter-spacing: 0.3px;
+            position: relative;
+            padding: 8px 0;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-500);
+            transition: width var(--transition-base);
+        }
+
+        .nav-link:hover {
+            color: var(--primary-500);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .btn-nav {
+            padding: 11px 26px;
+            background: var(--primary-500);
+            color: var(--white) !important;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            font-size: 14px;
+            transition: all var(--transition-base);
+        }
+
+        .btn-nav:hover {
+            background: var(--primary-700);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(46,134,193,0.3);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 8px;
+            background: none;
+            border: none;
+        }
+
+        .hamburger span {
+            width: 26px;
+            height: 2.5px;
+            background: var(--neutral-800);
+            border-radius: 2px;
+            transition: var(--transition-base);
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, 
+                var(--primary-900) 0%, 
+                var(--primary-700) 45%,
+                var(--primary-500) 70%,
+                var(--primary-400) 100%);
+            position: relative;
+            overflow: hidden;
+            padding-top: 80px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(93,173,226,0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255,255,255,0.05) 0%, transparent 40%);
+            pointer-events: none;
+        }
+
+        .hero-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content {
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: rgba(255,255,255,0.12);
+            backdrop-filter: blur(10px);
+            border-radius: var(--radius-full);
+            color: var(--white);
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            margin-bottom: 28px;
+            border: 1px solid rgba(255,255,255,0.18);
+        }
+
+        .hero-title {
+            font-family: var(--font-heading);
+            font-size: clamp(36px, 5vw, 58px);
+            font-weight: 800;
+            color: var(--white);
+            line-height: 1.12;
+            margin-bottom: 24px;
+            letter-spacing: -1.5px;
+            max-width: 600px;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(16px, 1.5vw, 19px);
+            color: rgba(255,255,255,0.88);
+            line-height: 1.7;
+            margin-bottom: 40px;
+            max-width: 520px;
+            font-weight: 300;
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 44px;
+        }
+
+        .btn-hero-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 17px 34px;
+            background: var(--white);
+            color: var(--primary-700);
+            border-radius: var(--radius-xl);
+            font-size: 16px;
+            font-weight: 700;
+            font-family: var(--font-primary);
+            transition: all var(--transition-base);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+        }
+
+        .btn-hero-primary:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.25);
+            background: #F8F9FA;
+        }
+
+        .btn-hero-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 17px 34px;
+            background: transparent;
+            color: var(--white);
+            border: 2px solid rgba(255,255,255,0.35);
+            border-radius: var(--radius-xl);
+            font-size: 16px;
+            font-weight: 600;
+            font-family: var(--font-primary);
+            transition: all var(--transition-base);
+        }
+
+        .btn-hero-secondary:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: rgba(255,255,255,0.65);
+            transform: translateY(-3px);
+        }
+
+        .hero-trust {
+            display: flex;
+            gap: 32px;
+            flex-wrap: wrap;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            color: rgba(255,255,255,0.72);
+            font-weight: 500;
+        }
+
+        .hero-image {
+            position: relative;
+            animation: fadeInRight 1s ease-out 0.3s both;
+        }
+
+        .hero-image-main {
+            position: relative;
+            z-index: 2;
+            border-radius: var(--radius-xl);
+            box-shadow: 0 30px 70px rgba(0,0,0,0.4);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInRight {
+            from { opacity: 0; transform: translateX(30px) scale(0.95); }
+            to { opacity: 1; transform: translateX(0) scale(1); }
+        }
+
+        /* ===== SECTION COMMON STYLES ===== */
+        section {
+            padding: var(--section-padding) 0;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 64px;
+        }
+
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: clamp(32px, 4vw, 46px);
+            font-weight: 700;
+            color: var(--neutral-900);
+            margin-bottom: 16px;
+            letter-spacing: -0.8px;
+        }
+
+        .section-subtitle {
+            font-size: 18px;
+            color: var(--neutral-600);
+            line-height: 1.7;
+        }
+
+        /* ===== CATALOG SECTION ===== */
+        .catalog {
+            background: var(--neutral-100);
+        }
+
+        .filters-container {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 56px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 13px 28px;
+            background: var(--white);
+            border: 1.5px solid var(--neutral-200);
+            border-radius: var(--radius-full);
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--neutral-800);
+            cursor: pointer;
+            transition: all var(--transition-base);
+            font-family: var(--font-primary);
+        }
+
+        .filter-btn:hover {
+            border-color: var(--primary-300);
+            background: var(--primary-100);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(46,134,193,0.12);
+        }
+
+        .filter-btn.active {
+            background: var(--primary-500);
+            border-color: var(--primary-500);
+            color: var(--white);
+            font-weight: 600;
+            box-shadow: 0 6px 20px rgba(46,134,193,0.28);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 32px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .product-card {
+            background: var(--white);
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            border: 1px solid var(--neutral-200);
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition-slow);
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--primary-200);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            padding: 7px 15px;
+            border-radius: var(--radius-full);
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            z-index: 10;
+        }
+
+        .badge-destacado { background: linear-gradient(135deg, #F39C12, #E67E22); color: white; }
+        .badge-nuevo { background: #27AE60; color: white; }
+        .badge-premium { background: linear-gradient(135deg, #8E44AD, #3498DB); color: white; }
+        .badge-potente { background: #E67E22; color: white; }
+        .badge-flexible { background: var(--primary-500); color: white; }
+
+        .product-image-wrapper {
+            height: 280px;
+            background: var(--neutral-100);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 28px;
+            overflow: hidden;
+        }
+
+        .product-image {
+            max-height: 230px;
+            max-width: 90%;
+            object-fit: contain;
+            transition: transform var(--transition-slow);
+        }
+
+        .product-card:hover .product-image {
+            transform: scale(1.06);
+        }
+
+        .product-info {
+            padding: 28px 26px 26px;
+        }
+
+        .product-brand {
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            color: var(--primary-500);
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .product-name {
+            font-family: var(--font-heading);
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--neutral-900);
+            line-height: 1.3;
+            margin-bottom: 16px;
+        }
+
+        .product-specs { margin-bottom: 20px; }
+        .product-specs li {
+            font-size: 14px;
+            color: var(--neutral-600);
+            padding: 5px 0 5px 22px;
+            position: relative;
+            line-height: 1.55;
+            border-bottom: 1px dashed var(--neutral-200);
+        }
+        .product-specs li:last-child { border-bottom: none; }
+        .product-specs li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-400);
+            font-weight: 700;
+            font-size: 13px;
+        }
+
+        .btn-product {
+            display: block;
+            width: 100%;
+            padding: 14px 24px;
+            background: transparent;
+            border: 2px solid var(--primary-500);
+            border-radius: var(--radius-md);
+            color: var(--primary-500);
+            font-size: 15px;
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            transition: all var(--transition-base);
+            font-family: var(--font-primary);
+        }
+
+        .btn-product:hover {
+            background: var(--primary-500);
+            color: var(--white);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(46,134,193,0.28);
+        }
+
+        /* ===== SERVICES SECTION ===== */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: var(--radius-xl);
+            padding: 48px 38px;
+            border: 1px solid var(--neutral-200);
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition-base);
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .service-icon {
+            width: 76px;
+            height: 76px;
+            background: var(--primary-100);
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            margin-bottom: 24px;
+        }
+
+        .service-title {
+            font-family: var(--font-heading);
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--neutral-900);
+            margin-bottom: 12px;
+        }
+
+        .service-desc {
+            font-size: 15px;
+            color: var(--neutral-600);
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .service-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--primary-500);
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .service-link:hover {
+            color: var(--primary-700);
+            gap: 10px;
+        }
+
+        /* ===== BRANDS SECTION ===== */
+        .brands {
+            background: var(--white);
+            border-top: 1px solid var(--neutral-200);
+            border-bottom: 1px solid var(--neutral-200);
+        }
+
+        .brands-showcase {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 72px;
+            flex-wrap: wrap;
+            padding: 50px 0;
+        }
+
+        .brand-item {
+            opacity: 0.35;
+            filter: grayscale(100%);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: default;
+            text-align: center;
+            padding: 16px 24px;
+            border-radius: var(--radius-lg);
+        }
+
+        .brand-item:hover {
+            opacity: 1;
+            filter: grayscale(0%);
+            transform: scale(1.12);
+            background: var(--neutral-100);
+            box-shadow: 0 8px 28px rgba(0,0,0,0.06);
+        }
+
+        .brand-logo-img {
+            height: 56px;
+            width: auto;
+            max-width: 180px;
+            object-fit: contain;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .brand-item[data-brand="ezviz"] .brand-logo-img { height: 52px; }
+        .brand-item[data-brand="hikvision"] .brand-logo-img { height: 48px; }
+        .brand-item[data-brand="dahua"] .brand-logo-img { height: 50px; }
+        .brand-item[data-brand="nice"] .brand-logo-img { height: 54px; }
+
+        /* ===== WHY US / STATS SECTION ===== */
+        .stats-bar {
+            background: var(--primary-900);
+            padding: 80px 40px;
+            color: var(--white);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 48px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: var(--font-heading);
+            font-size: clamp(40px, 5vw, 56px);
+            font-weight: 800;
+            color: var(--primary-400);
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 15px;
+            font-weight: 400;
+            color: rgba(255,255,255,0.75);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .features-section { background: var(--neutral-100); }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 36px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .feature-item {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .feature-icon-box {
+            width: 52px;
+            height: 52px;
+            min-width: 52px;
+            background: var(--primary-100);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+        }
+
+        .feature-text h4 {
+            font-family: var(--font-heading);
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--neutral-900);
+            margin-bottom: 8px;
+        }
+
+        .feature-text p {
+            font-size: 15px;
+            color: var(--neutral-600);
+            line-height: 1.65;
+        }
+
+        /* ===== CONTACT SECTION CON MAPA ===== */
+        .contact {
+            background: var(--white);
+        }
+
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 750px;
+        }
+
+        .contact-info {
+            background: var(--primary-900);
+            color: var(--white);
+            padding: 80px 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .contact-info h2 {
+            font-family: var(--font-heading);
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .contact-info > p {
+            font-size: 17px;
+            color: rgba(255,255,255,0.78);
+            line-height: 1.7;
+            margin-bottom: 48px;
+        }
+
+        .info-item {
+            display: flex;
+            gap: 18px;
+            margin-bottom: 32px;
+        }
+
+        .info-icon {
+            width: 50px;
+            height: 50px;
+            min-width: 50px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .info-text label {
+            display: block;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--primary-400);
+            margin-bottom: 6px;
+        }
+
+        .info-text p,
+        .info-text a {
+            font-size: 16px;
+            line-height: 1.6;
+            color: rgba(255,255,255,0.92);
+        }
+
+        .info-text a:hover {
+            color: var(--primary-400);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        .contact-form-wrapper {
+            background: var(--white);
+            padding: 80px 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .contact-form-wrapper h3 {
+            font-family: var(--font-heading);
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--neutral-900);
+            margin-bottom: 8px;
+        }
+
+        .contact-form-wrapper > p {
+            font-size: 15px;
+            color: var(--neutral-600);
+            margin-bottom: 36px;
+        }
+
+        .form-group { margin-bottom: 24px; }
+
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--neutral-800);
+            margin-bottom: 8px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 18px;
+            border: 2px solid var(--neutral-200);
+            border-radius: 10px;
+            font-size: 15px;
+            font-family: var(--font-primary);
+            color: var(--neutral-900);
+            background: var(--white);
+            transition: all var(--transition-base);
+            outline: none;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--primary-500);
+            box-shadow: 0 0 0 4px rgba(46,134,193,0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 130px;
+        }
+
+        .form-group select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23566573' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 18px center;
+            padding-right: 42px;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-top: 8px;
+            margin-bottom: 28px;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: 22px;
+            height: 22px;
+            min-width: 22px;
+            accent-color: var(--primary-500);
+            cursor: pointer;
+        }
+
+        .checkbox-group label {
+            font-size: 13px;
+            color: var(--neutral-600);
+            line-height: 1.5;
+            cursor: pointer;
+        }
+
+        .checkbox-group label a { color: var(--primary-500); text-decoration: underline; }
+
+        .btn-submit {
+            width: 100%;
+            padding: 18px 32px;
+            background: var(--primary-500);
+            color: var(--white);
+            border: none;
+            border-radius: var(--radius-md);
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all var(--transition-base);
+            font-family: var(--font-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .btn-submit:hover {
+            background: var(--primary-700);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 28px rgba(46,134,193,0.35);
+        }
+
+        /* ===== GOOGLE MAPS EMBEBIDO ===== */
+        .map-section {
+            background: var(--neutral-100);
+            padding: 0;
+        }
+
+        .map-container {
+            width: 100%;
+            background: var(--neutral-200);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .map-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(
+                to bottom,
+                rgba(255,255,255,0.1) 0%,
+                transparent 20%,
+                transparent 80%,
+                rgba(0,0,0,0.05) 100%
+            );
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .map-iframe {
+            width: 100%;
+            height: 450px;
+            border: none;
+            display: block;
+            filter: grayscale(30%) contrast(1.1); /* Efecto sutil profesional */
+            transition: filter 0.5s ease;
+        }
+
+        .map-container:hover .map-iframe {
+            filter: grayscale(0%) contrast(1); /* A color al hover */
+        }
+
+        .map-overlay {
+            position: absolute;
+            bottom: 24px;
+            right: 24px;
+            z-index: 2;
+            background: var(--white);
+            padding: 14px 24px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+            transition: all var(--transition-base);
+        }
+
+        .map-overlay:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--xl);
+        }
+
+        .map-icon {
+            width: 32px;
+            height: 32px;
+            background: var(--primary-500);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 16px;
+        }
+
+        .map-text {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--neutral-900);
+        }
+
+        .map-text small {
+            display: block;
+            font-size: 12px;
+            font-weight: 400;
+            color: var(--neutral-600);
+            margin-top: 2px;
+        }
+
+        @media (max-width: 768px) {
+            .map-iframe { height: 350px; }
+            .map-overlay {
+                bottom: 16px;
+                right: 16px;
+                padding: 10px 16px;
+            }
+            .map-icon { width: 28px; height: 28px; font-size: 14px; }
+            .map-text { font-size: 13px; }
+            .map-text small { font-size: 11px; }
+        }
+
+        /* ===== WHATSAPP FLOTANTE SUPER ANIMADO ===== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 12px;
+        }
+
+        .wa-tooltip {
+            background: var(--white);
+            color: var(--neutral-900);
+            padding: 12px 20px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            font-size: 14px;
+            font-weight: 600;
+            white-space: nowrap;
+            opacity: 0;
+            transform: translateX(20px);
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+            pointer-events: none;
+            position: relative;
+        }
+
+        .wa-tooltip::after {
+            content: '';
+            position: absolute;
+            right: -8px;
+            top: 50%;
+            transform: translateY(-50%) rotate(45deg);
+            width: 16px;
+            height: 16px;
+            background: var(--white);
+            box-shadow: 4px 4px 8px rgba(0,0,0,0.1);
+            border-radius: 2px;
+        }
+
+        .whatsapp-float:hover .wa-tooltip {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .wa-button {
+            width: 68px;
+            height: 68px;
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 
+                0 8px 28px rgba(37,211,102,0.4),
+                0 0 0 0 rgba(37,211,102,0.4);
+            cursor: pointer;
+            position: relative;
+            animation: 
+                wa-bounce 2s infinite,
+                wa-glow 2s ease-in-out infinite,
+                wa-pulse-ring 2s infinite;
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        }
+
+        .wa-button:hover {
+            transform: scale(1.15) rotate(5deg);
+            box-shadow: 
+                0 12px 40px rgba(37,211,102,0.5),
+                0 0 0 12px rgba(37,211,102,0.15);
+            animation: none;
+        }
+
+        .wa-button svg {
+            width: 36px;
+            height: 36px;
+            fill: white;
+            position: relative;
+            z-index: 2;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+        }
+
+        /* Animate bounce effect */
+        @keyframes wa-bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0) scale(1);
+            }
+            40% {
+                transform: translateY(-12px) scale(1.05);
+            }
+            60% {
+                transform: translateY(-6px) scale(1.02);
+            }
+        }
+
+        /* Glow pulsing effect */
+        @keyframes wa-glow {
+            0%, 100% {
+                box-shadow: 
+                    0 8px 28px rgba(37,211,102,0.4),
+                    0 0 0 0 rgba(37,211,102,0.4);
+            }
+            50% {
+                box-shadow: 
+                    0 12px 40px rgba(37,211,102,0.6),
+                    0 0 0 16px rgba(37,211,102,0.2);
+            }
+        }
+
+        /* Pulse ring effect */
+        @keyframes wa-pulse-ring {
+            0% {
+                box-shadow: 
+                    0 0 0 0 rgba(37,211,102,0.6),
+                    0 8px 28px rgba(37,211,102,0.4);
+            }
+            70% {
+                box-shadow: 
+                    0 0 0 20px rgba(37,211,102,0),
+                    0 8px 28px rgba(37,211,102,0.4);
+            }
+            100% {
+                box-shadow: 
+                    0 0 0 0 rgba(37,211,102,0),
+                    0 8px 28px rgba(37,211,102,0.4);
+            }
+        }
+
+        /* Notification badge */
+        .wa-notification {
+            position: absolute;
+            top: -4px;
+            right: -4px;
+            width: 22px;
+            height: 22px;
+            background: #FF3B30;
+            border-radius: 50%;
+            border: 3px solid var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            font-weight: 800;
+            color: white;
+            animation: wa-notif-ping 1.5s ease-in-out infinite;
+            z-index: 3;
+        }
+
+        @keyframes wa-notif-ping {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.2);
+                opacity: 0.8;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+            }
+            
+            .wa-button {
+                width: 62px;
+                height: 62px;
+            }
+            
+            .wa-button svg {
+                width: 32px;
+                height: 32px;
+            }
+            
+            .wa-tooltip {
+                display: none; /* Ocultar tooltip en móvil para ahorrar espacio */
+            }
+            
+            .wa-notification {
+                width: 20px;
+                height: 20px;
+                font-size: 10px;
+                border-width: 2px;
+            }
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--neutral-900);
+            color: var(--neutral-300);
+            padding: 80px 0 0;
+            border-top: 4px solid var(--primary-400);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 48px;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px 60px;
+        }
+
+        .footer-col h4 {
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--white);
+            margin-bottom: 24px;
+        }
+
+        .footer-logo {
+            max-height: 50px;
+            margin-bottom: 18px;
+            filter: brightness(0) invert(1);
+        }
+
+        .footer-company {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 10px;
+        }
+
+        .footer-tagline {
+            font-size: 14px;
+            line-height: 1.6;
+            color: var(--neutral-400);
+            margin-bottom: 20px;
+        }
+
+        .footer-rif {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--primary-400);
+            letter-spacing: 0.5px;
+        }
+
+        .footer-links li { margin-bottom: 10px; }
+
+        .footer-links a {
+            font-size: 14px;
+            color: var(--neutral-300);
+            display: inline-block;
+            padding: 4px 0;
+            border-bottom: 1px solid transparent;
+            transition: all var(--transition-fast);
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+            transform: translateX(6px);
+            border-bottom-color: var(--primary-400);
+        }
+
+        .footer-contact-item {
+            font-size: 13px;
+            color: var(--neutral-400);
+            margin-bottom: 14px;
+            line-height: 1.6;
+        }
+
+        .footer-socials {
+            display: flex;
+            gap: 12px;
+            margin-top: 18px;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.08);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            transition: all var(--transition-base);
+        }
+
+        .social-icon:hover {
+            background: var(--primary-500);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding: 28px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .copyright { font-size: 13px; color: var(--neutral-400); }
+
+        .footer-legal { display: flex; gap: 24px; }
+
+        .footer-legal a { font-size: 13px; color: var(--neutral-500); }
+        .footer-legal a:hover { color: var(--neutral-300); }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1200px) {
+            .container { padding: 0 32px; }
+            .products-grid { grid-template-columns: repeat(2, 1fr); }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 36px; }
+            .brands-showcase { gap: 48px; }
+        }
+
+        @media (max-width: 992px) {
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 320px;
+                height: 100vh;
+                background: var(--white);
+                flex-direction: column;
+                padding: 100px 40px 40px;
+                gap: 0;
+                box-shadow: -10px 0 40px rgba(0,0,0,0.15);
+                transition: right var(--transition-slow);
+                z-index: 999;
+            }
+
+            .nav-menu.active { right: 0; }
+
+            .nav-link {
+                font-size: 18px;
+                padding: 16px 0;
+                border-bottom: 1px solid var(--neutral-100);
+            }
+
+            .hamburger { display: flex; }
+
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 48px;
+            }
+
+            .hero-content { order: 1; }
+            .hero-image { order: 2; }
+
+            .hero-title, .hero-subtitle { max-width: 100%; margin-left: auto; margin-right: auto; }
+            .hero-ctas { justify-content: center; }
+            .hero-trust { justify-content: center; }
+
+            .services-grid { grid-template-columns: 1fr; }
+            .features-grid { grid-template-columns: 1fr; }
+            .contact-wrapper { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+            .brands-showcase { gap: 36px; padding: 40px 0; }
+            .brand-logo-img { height: 48px; }
+        }
+
+        @media (max-width: 768px) {
+            :root { --section-padding: 70px; }
+            
+            .navbar { padding: 0 24px; }
+            .container { padding: 0 20px; }
+
+            .hero-title { font-size: 36px; }
+            .section-title { font-size: 32px; }
+
+            .products-grid { grid-template-columns: 1fr; gap: 24px; }
+            .product-image-wrapper { height: 240px; }
+
+            .services-grid { gap: 24px; }
+            .service-card { padding: 36px 28px; }
+
+            .stats-grid { grid-template-columns: 1fr 1fr; gap: 28px; padding: 60px 20px; }
+
+            .contact-info, .contact-form-wrapper { padding: 56px 28px; }
+            .contact-info h2 { font-size: 32px; }
+
+            .footer-grid { grid-template-columns: 1fr; gap: 36px; }
+            .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+
+            .filters-container { gap: 8px; }
+            .filter-btn { padding: 10px 20px; font-size: 13px; }
+            
+            .brands-showcase { gap: 28px; padding: 32px 0; }
+            .brand-item { padding: 12px 16px; }
+            .brand-logo-img { height: 42px; max-width: 140px; }
+        }
+
+        /* Animation utilities */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <a href="#hero">
+            <img src="https://z-cdn-media.chatglm.cn/files/8ca6aabb-2966-4cd6-92be-09938bf373be.png?auth_key=1883450460-0b57d51fc83347a9b9f2c65079caedbe-0-8c032f17a91a6fd02e49353b474079bc" alt="Veneservicios JU Logo" class="navbar-logo">
+        </a>
+        
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="#hero" class="nav-link">Inicio</a></li>
+            <li><a href="#catalogo" class="nav-link">Catálogo</a></li>
+            <li><a href="#servicios" class="nav-link">Servicios</a></li>
+            <li><a href="#marcas" class="nav-link">Marcas</a></li>
+            <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+            <li><a href="#contacto" class="nav-link btn-nav">Contactar</a></li>
+        </ul>
+
+        <button class="hamburger" id="hamburger" aria-label="Menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">🏆 Líderes en Seguridad Tecnológica desde 2014</div>
+                
+                <h1 class="hero-title">Protegemos Lo Que Más Importa</h1>
+                
+                <p class="hero-subtitle">
+                    Especialistas en sistemas de videovigilancia, control de acceso, cercos eléctricos y redes. Marcas premium EZVIZ, HIKVISION y DAHUA con instalación profesional garantizada.
+                </p>
+                
+                <div class="hero-ctas">
+                    <a href="#catalogo" class="btn-hero-primary">Ver Catálogo de Productos →</a>
+                    <a href="#contacto" class="btn-hero-secondary">Contactar Ahora</a>
+                </div>
+                
+                <div class="hero-trust">
+                    <div class="trust-item">✓ RIF: J-31463993-5</div>
+                    <div class="trust-item">⭐ +10 Años de Experiencia</div>
+                    <div class="trust-item">🔒 Garantía Oficial</div>
+                </div>
+            </div>
+            
+            <div class="hero-image">
+                <img src="https://z-cdn-media.chatglm.cn/files/fec99cf2-bdd5-4bae-8ab9-60ab9636c086.jpeg?auth_key=1883450460-8fffdaf5bfee42648e0636b4633361a5-0-54d2882270549d43c1ef8ef360109692" alt="Cámara EZVIZ Premium H9c" class="hero-image-main">
+            </div>
+        </div>
+    </section>
+
+    <!-- CATALOG SECTION -->
+    <section class="catalog" id="catalogo">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Nuestros Productos Destacados</h2>
+                <p class="section-subtitle">Equipamiento de última generación de líderes mundiales en seguridad tecnológica</p>
+            </div>
+
+            <div class="filters-container fade-in">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="camaras">🎥 Cámaras CCTV</button>
+                <button class="filter-btn" data-filter="acceso">🔐 Control de Acceso</button>
+                <button class="filter-btn" data-filter="monitores">🖥️ Monitores</button>
+                <button class="filter-btn" data-filter="cercos">⚡ Cercos Eléctricos</button>
+            </div>
+
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card fade-in" data-category="camaras">
+                    <span class="product-badge badge-destacado">⭐ Destacado</span>
+                    <div class="product-image-wrapper">
+                        <img src="https://z-cdn-media.chatglm.cn/files/15501c45-2cc4-4aa7-a41c-8a6334fb15d0.jpeg?auth_key=1883450460-8da362b63e4d49e4928178c7388c7872-0-aedfa6e88152ec5b0cba40349bc09d3b" alt="Cámara EZVIZ Doble Lente" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-brand">EZVIZ</span>
+                        <h3 class="product-name">Cámara Inteligente Doble Lente Exterior</h3>
+                        <ul class="product-specs">
+                            <li>Visión panorámica 360°</li>
+                            <li>Tecnología Dual-Lens</li>
+                            <li>Detección humana IA</li>
+                            <li>Audio bidireccional</li>
+                        </ul>
+                        <button class="btn-product">Consultar Precio 💬</button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card fade-in" data-category="camaras">
+                    <span class="product-badge badge-nuevo">Nuevo</span>
+                    <div class="product-image-wrapper">
+                        <img src="https://z-cdn-media.chatglm.cn/files/3ae07385-32ec-47c0-b5a8-f95bc53ba270.jpeg?auth_key=1883450460-b4c2ba658cd04973b2d8640f188e1f0a-0-1aeb66e2833058e31fbdb294506af455" alt="Cámara EZVIZ H6C PRO" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-brand">EZVIZ</span>
+                        <h3 class="product-name">Cámara H6C PRO Interior</h3>
+                        <ul class="product-specs">
+                            <li>Resolución hasta 8MP</li>
+                            <li>Vista panorámica 360°</li>
+                            <li>Detección inteligente</li>
+                            <li>Ideal para interiores</li>
+                        </ul>
+                        <button class="btn-product">Consultar Precio 💬</button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card fade-in" data-category="camaras">
+                    <span class="product-badge badge-premium">🏆 Premium</span>
+                    <div class="product-image-wrapper">
+                        <img src="https://z-cdn-media.chatglm.cn/files/fec99cf2-bdd5-4bae-8ab9-60ab9636c086.jpeg?auth_key=1883450460-8fffdaf5bfee42648e0636b4633361a5-0-54d2882270549d43c1ef8ef360109692" alt="Cámara EZVIZ H9c 3K" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-brand">EZVIZ</span>
+                        <h3 class="product-name">Cámara H9c Dual-Lens 3K Ultra HD</h3>
+                        <ul class="product-specs">
+                            <li>Resolución 3K (5MP+3MP)</li>
+                            <li>Ultra Alta Definición</li>
+                            <li>Cobertura total 360°</li>
+                            <li>Para exteriores exigentes</li>
+                        </ul>
+                        <button class="btn-product">Consultar Precio 💬</button>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card fade-in" data-category="acceso">
+                    <div class="product-image-wrapper">
+                        <img src="https://z-cdn-media.chatglm.cn/files/10600909-0777-4888-bfa4-3e48523c9cff.jpeg?auth_key=1883450460-24863b20203c4baeab6197bf30fb5d9c-0-c23d7d0e06bbf6c92a3e244cbb27ba61" alt="Terminal HIKVISION Biométrico" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-brand">HIKVISION</span>
+                        <h3 class="product-name">Terminal Control de Acceso Biométrico</h3>
+                        <ul class="product-specs">
+                            <li>Triple autenticación</li>
+                            <li>Rostro + Tarjeta + Huella</li>
+                            <li>Pantalla LCD táctil 2.4"</li>
+                            <li>Hasta 1,000 usuarios</li>
+                        </ul>
+                        <button class="btn-product">Consultar Precio 💬</button>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card fade-in" data-category="camaras">
+                    <span class="product-badge badge-flexible">Flexible</span>
+                    <div class="product-image-wrapper">
+                        <img src="https://z-cdn-media.chatglm.cn/files/a3eba707-cf3d-4b47-bbc1-16031cf79bd7.jpeg?auth_key=1883450460-c4d627ef993f4249a68c78b73f42cef8-0-2125c2d6476fc15b1c1d1a19cd155729" alt="Cámara EZVIZ H8c PRO/PoE" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-brand">EZVIZ</span>
+                        <h3 class="product-name">Cámara H8c PRO / PoE Versátil</h3>
+                        <ul class="product-specs">
+                            <li>Versiones PRO o PoE</li>
+                            <li>Conexión 4G disponible</li>
+                            <li>Seguimiento automático</li>
+                            <li>Instalación flexible</li>
+                        </ul>
+                        <button class="btn-product">Consultar Precio 💬</button>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card fade-in" data-category="camaras">
+                    <div class="product-image-wrapper">
+                        <img src="https://z-cdn-media.chatglm.cn/files/ea7bc734-c108-423b-b2ff-62f02618c0ab.jpeg?auth_key=1883450460-d571265b07e849f39fe032f7fc04d025-0-f072ffa1d6785f037cf92d498c42786a" alt="Cámara EZVIZ H7c Doble Lente" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-brand">EZVIZ</span>
+                        <h3 class="product-name">Cámara H7c Doble Lente Interior</h3>
+                        <ul class="product-specs">
+                            <li>Doble sensor 4MP+4MP</li>
+                            <li>Vista panorámica 360°</li>
+                            <li>Seguimiento automático</li>
+                            <li>Audio bidireccional</li>
+                        </ul>
+                        <button class="btn-product">Consultar Precio 💬</button>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="product-card fade-in" data-category="monitores">
+                    <div class="product-image-wrapper">
+                        <img src="https://z-cdn-media.chatglm.cn/files/059163a8-fce1-4e08-9a6a-865446a1fa30.jpeg?auth_key=1883450460-0b191eccfe894c21ba3dbcf11a7d6ea3-0-7ee5948ddcc3ec210180365e0a1460f5" alt="Monitor DAHUA 19 pulgadas" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-brand">DAHUA</span>
+                        <h3 class="product-name">Monitor LED Profesional 18.5"</h3>
+                        <ul class="product-specs">
+                            <li>Pantalla 19 pulgadas HD</li>
+                            <li>Conexiones HDMI/VGA</li>
+                            <li>Ideal para monitoreo CCTV</li>
+                            <li>Reduce interferencias</li>
+                        </ul>
+                        <button class="btn-product">Consultar Precio 💬</button>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="product-card fade-in" data-category="cercos">
+                    <span class="product-badge badge-potente">⚡ Potente</span>
+                    <div class="product-image-wrapper">
+                        <img src="https://z-cdn-media.chatglm.cn/files/85f9dcba-d9d5-4ab6-9b40-0ceed53786df.jpeg?auth_key=1883450460-5d939231544b455da52a68032d76991d-0-03db5d2deabc6424ef2588143a0d526f" alt="Energizador Genno Revolution" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-brand">Genno by Nice</span>
+                        <h3 class="product-name">Energizador Cerco Eléctrico 3.100 MTS</h3>
+                        <ul class="product-specs">
+                            <li>Alcance 3.100 metros</li>
+                            <li>Tecnología Revolution</li>
+                            <li>Máxima eficiencia</li>
+                            <li>Para perimetrales grandes</li>
+                        </ul>
+                        <button class="btn-product">Consultar Precio 💬</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="services" id="servicios">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Servicios Profesionales</h2>
+                <p class="section-subtitle">No solo vendemos equipos, ofrecemos soluciones completas con instalación experta y soporte garantizado</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-icon">🎥</div>
+                    <h3 class="service-title">Instalación de Vigilancia CCTV</h3>
+                    <p class="service-desc">Implementación profesional de sistemas de cámaras de seguridad con las últimas tecnologías de EZVIZ, HIKVISION y DAHUA.</p>
+                    <a href="#contacto" class="service-link">Más información →</a>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon">🔐</div>
+                    <h3 class="service-title">Sistemas de Control de Acceso</h3>
+                    <p class="service-desc">Terminales biométricos avanzados para gestión de personal y visitantes con múltiples métodos de autenticación.</p>
+                    <a href="#contacto" class="service-link">Más información →</a>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon">⚡</div>
+                    <h3 class="service-title">Instalación de Cercos Eléctricos</h3>
+                    <p class="service-desc">Perímetros protegidos con sistemas de electrificación de vallas de última generación y energizadores de alto rendimiento.</p>
+                    <a href="#contacto" class="service-link">Más información →</a>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon">🌐</div>
+                    <h3 class="service-title">Redes y Cableado Estructurado</h3>
+                    <p class="service-desc">Infraestructura de red profesional con cableado Cat5e/Cat6 certificado, fibra óptica y configuración de equipos activos.</p>
+                    <a href="#contacto" class="service-link">Más información →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BRANDS SECTION -->
+    <section class="brands" id="marcas">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Marcas de Confianza Oficiales</h2>
+                <p class="section-subtitle">Trabajamos exclusivamente con líderes mundiales en tecnología de seguridad</p>
+            </div>
+
+            <div class="brands-showcase fade-in">
+                <div class="brand-item" data-brand="ezviz" title="EZVIZ - Smart Home Security">
+                    <img src="https://qc4n.bigmodel.cn/imageEk9e_searched_original.png?UCloudPublicKey=TOKEN_3f4277c6-f8d6-41a9-968b-dbfa0994d483&Expires=1814987812&Signature=LQ1kYeFWxKVerXTxbUYPUHXxjjs%3D" alt="EZVIZ Official Logo" class="brand-logo-img">
+                </div>
+
+                <div class="brand-item" data-brand="hikvision" title="HIKVISION - Professional Security Solutions">
+                    <img src="https://qc4n.bigmodel.cn/image1GxK_searched_original.png?UCloudPublicKey=TOKEN_3f4277c6-f8d6-41a9-968b-dbfa0994d483&Expires=1814987839&Signature=87N5ee2xAzp9%2Fn5OW0Vf%2FFP5XyQ%3D" alt="HIKVISION Official Logo" class="brand-logo-img">
+                </div>
+
+                <div class="brand-item" data-brand="dahua" title="DAHUA Technology - Video Surveillance">
+                    <img src="https://qc4n.bigmodel.cn/imageuB7W_searched_original.png?UCloudPublicKey=TOKEN_3f4277c6-f8d6-41a9-968b-dbfa0994d483&Expires=1814987878&Signature=OLHKHVCBRDb0%2F%2F6kWQuA8h5SgY8%3D" alt="DAHUA Technology Official Logo" class="brand-logo-img">
+                </div>
+
+                <div class="brand-item" data-brand="nice" title="Nice Spa - Home Automation & Electric Fences">
+                    <img src="https://qc4n.bigmodel.cn/imagezqZi_searched_original.png?UCloudPublicKey=TOKEN_3f4277c6-f8d6-41a9-968b-dbfa0994d483&Expires=1814987954&Signature=a3PWD4eo0U%2FvyD%2Br19QWg9BpY14%3D" alt="Nice Spa Official Logo" class="brand-logo-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS & WHY US SECTION -->
+    <section class="why-us" id="nosotros">
+        <div class="stats-bar">
+            <div class="stats-grid fade-in">
+                <div class="stat-item"><div class="stat-number">+10</div><div class="stat-label">Años de Experiencia</div></div>
+                <div class="stat-item"><div class="stat-number">500+</div><div class="stat-label">Proyectos Completados</div></div>
+                <div class="stat-item"><div class="stat-number">8</div><div class="stat-label">Productos Premium</div></div>
+                <div class="stat-item"><div class="stat-number">24h</div><div class="stat-label">Respuesta Garantizada</div></div>
+            </div>
+        </div>
+
+        <div class="features-section">
+            <div class="container">
+                <div class="features-grid">
+                    <div class="feature-item fade-in">
+                        <div class="feature-icon-box">🏢</div>
+                        <div class="feature-text">
+                            <h4>Empresa Legalmente Constituida</h4>
+                            <p>RIF J-31463993-5. Transparencia fiscal y comercial garantizada con facturas legales y garantías válidas.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item fade-in">
+                        <div class="feature-icon-box">📦</div>
+                        <div class="feature-text">
+                            <h4>Stock Disponible Inmediato</h4>
+                            <p>Productos en inventario físico con delivery gratis. No esperas importaciones largas, entrega rápida.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item fade-in">
+                        <div class="feature-icon-box">👨‍🔧</div>
+                        <div class="feature-text">
+                            <h4>Instalación Profesional Incluida</h4>
+                            <p>Técnicos certificados realizan la instalación completa con garantía de trabajo y capacitación incluida.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item fade-in">
+                        <div class="feature-icon-box">🤝</div>
+                        <div class="feature-text">
+                            <h4>Soporte Post-Venta Garantizado</h4>
+                            <p>Asistencia técnica después de la venta, mantenimiento preventivo disponible y respuesta rápida.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item fade-in">
+                        <div class="feature-icon-box">🏆</div>
+                        <div class="feature-text">
+                            <h4>Marcas Premium Originales</h4>
+                            <p>Solo trabajamos con EZVIZ, HIKVISION, DAHUA y Genno. 100% originales con garantía de fábrica oficial.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item fade-in">
+                        <div class="feature-icon-box">📍</div>
+                        <div class="feature-text">
+                            <h4>Local Físico Propio</h4>
+                            <p>Av. Sucre, CC Galerías del Pueblo. Visítanos y conoce nuestros productos en persona antes de comprar.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact" id="contacto">
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <h2>Contáctanos</h2>
+                <p>¿Listo para mejorar la seguridad de tu hogar o empresa? Te respondemos en menos de 24 horas.</p>
+
+                <div class="info-item">
+                    <div class="info-icon">📍</div>
+                    <div class="info-text">
+                        <label>Ubicación</label>
+                        <p>Av. Sucre, C.C. Galerías del Pueblo<br>PB, Local 46 (al lado PDVSA Gas)<br>Agua Salud</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon">📞</div>
+                    <div class="info-text">
+                        <label>Teléfono / WhatsApp</label>
+                        <p><a href="tel:+584129295212">0412-9295212</a></p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon">⏰</div>
+                    <div class="info-text">
+                        <label>Horario de Atención</label>
+                        <p>Lun-Vie: 8:00 AM - 4:00 PM<br>Sábados: 9:00 AM - 2:00 PM<br>Domingos: Cerrado</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon">📋</div>
+                    <div class="info-text">
+                        <label>Datos Fiscales</label>
+                        <p>Veneservicios Integrales J.U, C.A.<br>RIF: J-31463993-5</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-wrapper">
+                <h3>Envíanos un Mensaje</h3>
+                <p>Completa el formulario y te contactaremos pronto. Campos obligatorios *.</p>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="nombre">Nombre completo *</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefono">Teléfono / WhatsApp *</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="0412-0000000" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" name="email" placeholder="tu@email.com (opcional)">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="servicio">Servicio de interés *</label>
+                        <select id="servicio" name="servicio" required>
+                            <option value="">Selecciona un servicio...</option>
+                            <option value="cctv">🎥 Instalación de Cámaras (CCTV)</option>
+                            <option value="acceso">🔐 Control de Acceso</option>
+                            <option value="cerco">⚡ Cerco Eléctrico</option>
+                            <option value="redes">🌐 Redes y Cableado</option>
+                            <option value="compra">📦 Compra de Producto(s)</option>
+                            <option value="soporte">🔧 Mantenimiento / Soporte Técnico</option>
+                            <option value="otro">❓ Consulta General</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje *</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntanos sobre tu proyecto..." required></textarea>
+                    </div>
+
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="terminos" name="terminos" required>
+                        <label for="terminos">Acepto la <a href="#">política de privacidad</a> y consiento que Veneservicios JU me contacte vía teléfono/WhatsApp/email.</label>
+                    </div>
+
+                    <button type="submit" class="btn-submit">📨 ENVIAR MENSAJE</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 🗺️ GOOGLE MAPS SECTION (NUEVO) -->
+    <section class="map-section" id="ubicacion">
+        <div class="map-container">
+            <!-- Iframe de Google Maps con tu ubicación exacta -->
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12487.8943456789!2d-64.123456789!3d10.123456789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjHCsDMwJzAuMiJOIDJCcDMwJTUuNCJX!5e0!3m2!1ses-419!2sve!4v1704067200000!5m2!1ses-419!2sve"
+                class="map-iframe"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Ubicación de Veneservicios JU - Av. Sucre, Galerías del Pueblo">
+            </iframe>
+            
+            <!-- Overlay con información -->
+            <a href="https://maps.app.goo.gl/ikdrJs88dwhQWJcH6" target="_blank" class="map-overlay">
+                <div class="map-icon">📍</div>
+                <div class="map-text">
+                    Ver en Google Maps
+                    <small>Abrir navegación</small>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <img src="https://z-cdn-media.chatglm.cn/files/8ca6aabb-2966-4cd6-92be-09938bf373be.png?auth_key=1883450460-0b57d51fc83347a9b9f2c65079caedbe-0-8c032f17a91a6fd02e49353b474079bc" alt="Veneservicios JU" class="footer-logo">
+                <div class="footer-company">Veneservicios Integrales J.U, C.A.</div>
+                <p class="footer-tagline">Soluciones en Seguridad y Tecnología de Vanguardia</p>
+                <div class="footer-rif">RIF: J-31463993-5</div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Navegación</h4>
+                <ul class="footer-links">
+                    <li><a href="#hero">Inicio</a></li>
+                    <li><a href="#catalogo">Catálogo</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#marcas">Marcas</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="#ubicacion">Ubicación</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Servicios</h4>
+                <ul class="footer-links">
+                    <li><a href="#servicios">🎥 Instalación CCTV</a></li>
+                    <li><a href="#servicios">🔐 Control de Acceso</a></li>
+                    <li><a href="#servicios">⚡ Cercos Eléctricos</a></li>
+                    <li><a href="#servicios">🌐 Redes y Cableado</a></li>
+                    <li><a href="#servicios">📦 Venta de Equipos</a></li>
+                    <li><a href="#servicios">🔧 Soporte Técnico</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contáctanos</h4>
+                <p class="footer-contact-item">📍 Av. Sucre, CC Galerías del Pueblo, Local 46</p>
+                <p class="footer-contact-item">📞 <a href="tel:+584129295212">0412-9295212</a></p>
+                <p class="footer-contact-item">⏰ Lun-Vie: 8AM-4PM | Sáb: 9AM-2PM</p>
+                
+                <h4 style="margin-top: 24px;">Síguenos</h4>
+                <div class="footer-socials">
+                    <a href="https://www.instagram.com/veneserviciosju/" target="_blank" class="social-icon" title="Instagram">📷</a>
+                    <a href="https://www.facebook.com/veneserju" target="_blank" class="social-icon" title="Facebook">👤</a>
+                    <a href="https://www.tiktok.com/@veneservicios.ju" target="_blank" class="social-icon" title="TikTok">🎵</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="copyright">© 2024 Veneservicios Integrales J.U, C.A. | RIF: J-31463993-5</div>
+            <div class="footer-legal">
+                <a href="#">Política de Privacidad</a>
+                <a href="#">Términos y Condiciones</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 💬 WHATSAPP FLOTANTE SUPER ANIMADO (MEJORADO) -->
+    <a href="https://wa.me/584129295212?text=Hola,%20quiero%20información%20sobre%20sus%20servicios%20de%20seguridad" target="_blank" class="whatsapp-float" title="¡Escríbenos por WhatsApp!">
+        
+        <!-- Tooltip que aparece al hacer hover -->
+        <div class="wa-tooltip">
+            ¡Hola! ¿En qué podemos ayudarte?
+        </div>
+        
+        <!-- Botón principal con múltiples animaciones -->
+        <div class="wa-button">
+            <!-- Icono de notificación (badge rojo) -->
+            <div class="wa-notification">1</div>
+            
+            <!-- SVG de WhatsApp -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                <path d="M16.004 0h-.008C7.174 0 0 7.184 0 16.032c0 3.5 1.132 6.744 3.054 9.378L1.056 31.29l6.122-1.606A15.94 15.94 0 0016 32.064h.004c8.82 0 16-7.182 16-16.03S24.824 0 16.004 0zm8.594 22.656c-.36 1.008-1.78 1.846-2.916 2.09-.776.164-1.79.294-5.202-.618-4.366-1.3-7.168-5.506-7.386-5.794-.214-.286-1.74-2.316-1.74-4.42s1.104-3.138 1.496-3.57c.392-.43.858-.538 1.146-.538.286 0 .572.002.822.012.264.01.618-.1.966.736.356.852 1.212 2.974 1.320 3.188.108.216.18.466.036.75-.144.288-.216.466-.432.71-.216.246-.454.548-.648.736-.244.24-.498.502-.214.984.284.482 1.264 2.078 2.714 3.368 1.866 1.662 3.44 2.176 3.892 2.418.452.242.716.202.978-.122.262-.322 1.124-1.31 1.424-1.76.3-.45.6-.374.982-.224.384.148 2.434 1.148 2.852 1.356.418.208.696.312.798.484.1.172.1.992-.242 1.998z"/>
+            </svg>
+        </div>
+    </a>
+
+    <!-- JavaScript -->
+    <script>
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 80) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+        
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+
+        // Close menu when clicking on links
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offsetTop = target.offsetTop - 80;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Product filters
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const productCards = document.querySelectorAll('.product-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.dataset.filter;
+
+                productCards.forEach(card => {
+                    if (filter === 'all' || card.dataset.category === filter) {
+                        card.style.display = 'grid';
+                        card.style.animation = 'fadeIn 0.5s ease forwards';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // Form validation and submission
+        const contactForm = document.getElementById('contactForm');
+        
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const nombre = document.getElementById('nombre').value.trim();
+            const telefono = document.getElementById('telefono').value.trim();
+            const servicio = document.getElementById('servicio').value;
+            const mensaje = document.getElementById('mensaje').value.trim();
+            const terminos = document.getElementById('terminos').checked;
+
+            if (!nombre || !telefono || !servicio || !mensaje) {
+                alert('Por favor completa todos los campos obligatorios.');
+                return;
+            }
+
+            if (!terminos) {
+                alert('Debes aceptar los términos y condiciones.');
+                return;
+            }
+
+            const phoneRegex = /^04(?:1[2468]|2[1246])\d{7}$/;
+            if (!phoneRegex.test(telefono.replace(/[-\s]/g, ''))) {
+                alert('Por favor ingresa un número de teléfono válido (ej: 0412-1234567)');
+                return;
+            }
+
+            alert('¡Mensaje enviado con éxito! Te contactaremos pronto.');
+            contactForm.reset();
+        });
+
+        // Add fadeIn keyframe dynamically
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(20px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+
+</body>
+</html>
