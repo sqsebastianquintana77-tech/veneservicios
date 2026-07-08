@@ -22,11 +22,11 @@
 }
 
 .track-left {
-    animation: scroll-left 45s linear infinite;
+    animation: scroll-left 90s linear infinite;
 }
 
 .track-right {
-    animation: scroll-right 45s linear infinite;
+    animation: scroll-right 90s linear infinite;
 }
 
 .carousel-track:hover {

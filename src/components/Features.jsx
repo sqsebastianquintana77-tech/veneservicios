@@ -70,6 +70,14 @@ const Features = () => {
                                 <p>Cuidamos cada detalle, usando canalizaciones adecuadas para un acabado profesional y limpio.</p>
                             </div>
                         </div>
+
+                        <div className="feature-item fade-in" style={{ transitionDelay: '0.4s' }}>
+                            <div className="feature-icon-box">🛵</div>
+                            <div className="feature-text">
+                                <h4>Delivery a toda Caracas</h4>
+                                <p>Llevamos tus equipos de seguridad directamente a tu dirección para tu mayor comodidad y rapidez.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>

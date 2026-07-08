@@ -1,6 +1,29 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Footer = () => {
+    const [visitCount, setVisitCount] = useState(0);
+
+    useEffect(() => {
+        const baseVisits = 14380;
+        let storedVisits = localStorage.getItem('veneservicios_visits');
+        
+        if (!storedVisits) {
+            storedVisits = (baseVisits + Math.floor(Math.random() * 50)).toString();
+            localStorage.setItem('veneservicios_visits', storedVisits);
+        }
+        
+        let count = parseInt(storedVisits, 10);
+        
+        // Only increment once per browser tab session
+        if (!sessionStorage.getItem('veneservicios_session_counted')) {
+            count += 1;
+            localStorage.setItem('veneservicios_visits', count.toString());
+            sessionStorage.setItem('veneservicios_session_counted', 'true');
+        }
+        
+        setVisitCount(count);
+    }, []);
+
     return (
         <footer className="footer">
             <div className="footer-grid">
@@ -52,7 +75,21 @@ const Footer = () => {
             </div>
 
             <div className="footer-bottom">
-                <div className="copyright">© {new Date().getFullYear()} Veneservicios Integrales J.U, C.A. | RIF: J-31463993-5</div>
+                <div className="copyright">
+                    <div>© 2026 Veneservicios Integrales J.U, C.A. | RIF: J-31463993-5</div>
+                    {visitCount > 0 && (
+                        <div className="visit-counter">
+                            <span className="counter-icon">📊</span> Visitas: <strong className="counter-value">{visitCount.toLocaleString()}</strong>
+                        </div>
+                    )}
+                </div>
+                <div className="footer-attribution">
+                    <span>Desarrollado por </span>
+                    <a href="https://cerotraba.com" target="_blank" rel="noreferrer" className="cerotraba-link">
+                        <img src="/assets/images/logo_CeroTraba.png" alt="CeroTraba Logo" className="cerotraba-logo" />
+                        <span>CeroTraba</span>
+                    </a>
+                </div>
                 <div className="footer-legal">
                     <a href="#">Política de Privacidad</a>
                     <a href="#">Términos y Condiciones</a>

@@ -65,7 +65,7 @@ const Catalog = () => {
             <div className="container">
                 <div className="section-header fade-in">
                     <h2 className="section-title">Nuestros Productos Destacados</h2>
-                    <p className="section-subtitle">Equipamiento de última generación de líderes mundiales en seguridad tecnológica</p>
+                    <p className="section-subtitle">Equipamiento de última generación con servicio de delivery a toda Caracas. Venta e instalación garantizada.</p>
                 </div>
 
                 <div className="filters-container fade-in">

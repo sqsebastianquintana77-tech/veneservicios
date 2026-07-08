@@ -37,6 +37,7 @@ const Hero = () => {
                         <div className="trust-item">✓ RIF: J-31463993-5</div>
                         <div className="trust-item">⭐ +10 Años de Experiencia</div>
                         <div className="trust-item">🔒 Garantía Oficial</div>
+                        <div className="trust-item">🛵 Delivery a toda Caracas</div>
                     </div>
                 </div>
                 
