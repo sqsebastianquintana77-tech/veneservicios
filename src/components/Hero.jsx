@@ -42,7 +42,7 @@ const Hero = () => {
                 </div>
                 
                 <div className="hero-image fade-in" style={{ transitionDelay: '0.2s' }}>
-                    <img src="/assets/images/Captura de pantalla_7-7-2026_13498_www.instagram.com.jpeg" alt="Sistemas de Seguridad" className="hero-image-main" style={{ borderRadius: 'var(--radius-xl)' }} />
+                    <video src="/assets/images/video.mp4" autoPlay loop muted playsInline className="hero-image-main" style={{ borderRadius: 'var(--radius-xl)', width: '100%', height: 'auto', objectFit: 'cover' }} />
                 </div>
             </div>
         </section>
